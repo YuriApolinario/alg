@@ -3,6 +3,16 @@ package exemploFuncao;
 import java.util.Scanner;
 
 public class FuncaoComRetorno {
+    // Não usamos VOID porque a função vai ter um
+    // retorno do tipo DOUBLE
+    public static double pedirNumero(){
+        Scanner e = new Scanner(System.in);
+        System.out.println("Digite um número:");
+        double num = e.nextDouble();
+        // Depois vamos retornar o valor digitado pelo
+        // usuário para nosso programa
+        return num;
+    }
 
     public static void criarMenu() {
 
@@ -27,11 +37,12 @@ public class FuncaoComRetorno {
         System.out.println("A variavel valor vale: " + valor);
     }
 
+    // Remover o Scanner, o print e o next
+    // Trocar tudo isso pelo "pedirNumero()"
+    // Armazenando em uma variável nesta função
     public static void calcularDobro() {
-        Scanner e = new Scanner(System.in);
         double n, dobro;
-        System.out.print("Digite um número: ");
-        n = e.nextDouble();
+        n = pedirNumero();
         dobro = n * 2;
         System.out.println("Dobro de " + n + " = " + dobro);
     }

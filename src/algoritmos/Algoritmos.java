@@ -20,6 +20,10 @@ public class Algoritmos {
         quadrado(15);
 
         System.out.println("Metade: " + metade(15));
+        
+        double raiz;
+        
+        raiz = Math.sqrt(15);
     }
 
 }
